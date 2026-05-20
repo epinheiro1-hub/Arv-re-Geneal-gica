@@ -1,0 +1,443 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+
+body {
+    background: linear-gradient(to bottom, #f5efe4, #ece2d1);
+    font-family: 'Inter', sans-serif;
+    color: #2c2c2c;
+    padding: 40px 20px;
+}
+
+/* ================= TOPO ================= */
+
+.topo {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.topo h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3.3rem;
+    color: #5a1e1e;
+    margin-bottom: 12px;
+}
+
+.topo p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* ================= ÁRVORE ================= */
+
+.arvore {
+    max-width: 1700px;
+    margin: auto;
+}
+
+/* ================= GERAÇÕES ================= */
+
+.geracao {
+    margin-bottom: 90px;
+    position: relative;
+}
+
+.geracao h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #5a1e1e;
+    font-size: 2rem;
+    font-family: 'Cinzel', serif;
+}
+
+/* ================= PATRIARCH BLOCK ================= */
+
+.patriarch-block {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+    flex-wrap: wrap;
+}
+
+.union-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 300px;
+}
+
+.union-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.95rem;
+    color: #9b4444;
+    margin-bottom: 18px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.union-divider {
+    font-size: 2rem;
+    color: #c49a6c;
+    padding: 0 40px;
+    padding-top: 80px;
+    opacity: 0.6;
+    flex-shrink: 0;
+}
+
+/* ================= COUPLE BANNER ================= */
+
+.couple-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+}
+
+.couple-mid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 0 12px;
+}
+
+.connector-line {
+    width: 70px;
+    height: 4px;
+    background: #7b2d2d;
+    border-radius: 999px;
+    position: relative;
+}
+
+/* Linha tracejada = separados */
+.connector-line.separated {
+    background: repeating-linear-gradient(
+        90deg,
+        #7b2d2d 0px,
+        #7b2d2d 8px,
+        transparent 8px,
+        transparent 14px
+    );
+}
+
+.sep-label {
+    font-size: 0.72rem;
+    color: #9b5050;
+    font-style: italic;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+}
+
+/* ================= CHILDREN SECTION ================= */
+
+.children-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* Barra horizontal acima dos filhos */
+.children-bar {
+    width: 70%;
+    height: 3px;
+    background: rgba(123, 45, 45, 0.3);
+    border-radius: 999px;
+    margin-bottom: 0;
+}
+
+.children-row {
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+    flex-wrap: wrap;
+    padding-top: 0;
+}
+
+/* Coluna de cada filho com traço vertical para baixo */
+.child-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.child-tick {
+    width: 3px;
+    height: 28px;
+    background: rgba(123, 45, 45, 0.4);
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+/* ================= PESSOAS ================= */
+
+.pessoa {
+    text-align: center;
+    position: relative;
+    padding: 8px;
+}
+
+.pessoa img {
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #7b2d2d;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: 0.3s;
+    display: block;
+    margin: 0 auto;
+}
+
+.pessoa img:hover {
+    transform: scale(1.05);
+}
+
+.pessoa h3 {
+    margin-top: 12px;
+    font-size: 1rem;
+    color: #4a1c1c;
+}
+
+.pessoa span {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* ================= PESSOA PEQUENA ================= */
+
+.pequena img {
+    width: 90px;
+    height: 90px;
+}
+
+.pequena h3 {
+    font-size: 0.85rem;
+}
+
+/* ================= DESTAQUE ================= */
+
+.destaque img {
+    border-color: #b22222;
+    box-shadow:
+        0 0 0 5px rgba(178,34,34,0.15),
+        0 12px 24px rgba(0,0,0,0.2);
+}
+
+/* ================= INFO BADGE ================= */
+
+.info-badge {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #7b2d2d;
+    background: #fff;
+    color: #7b2d2d;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    font-size: 0.85rem;
+}
+
+.info-badge:hover {
+    background: #7b2d2d;
+    color: #fff;
+}
+
+/* ================= MODAL ================= */
+
+.info-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 20;
+}
+
+.info-modal.hidden {
+    display: none;
+}
+
+.info-card {
+    background: #fff;
+    border-radius: 24px;
+    padding: 28px;
+    width: min(520px, 100%);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+    position: relative;
+    text-align: left;
+}
+
+.close-button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: transparent;
+    color: #7b2d2d;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.info-card h3 {
+    margin-bottom: 12px;
+    font-size: 1.9rem;
+    color: #5a1e1e;
+}
+
+.info-card p {
+    margin-bottom: 14px;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 900px) {
+    .topo h1 {
+        font-size: 2.2rem;
+    }
+
+    .geracao h2 {
+        font-size: 1.6rem;
+    }
+
+    .patriarch-block {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .union-divider {
+        padding: 20px 0;
+    }
+
+    .couple-banner {
+        flex-direction: column;
+    }
+
+    .connector-line,
+    .connector-line.separated {
+        width: 4px;
+        height: 40px;
+        background: #7b2d2d;
+        background-image: repeating-linear-gradient(
+            180deg,
+            #7b2d2d 0px,
+            #7b2d2d 8px,
+            transparent 8px,
+            transparent 14px
+        );
+    }
+
+    .children-bar {
+        width: 3px;
+        height: 40px;
+    }
+
+    .children-row {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* ================= GERAÇÃO 2 — ROW DE CASAIS ================= */
+
+.gen2-row {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.gen2-family-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    border-radius: 28px;
+    padding: 28px 24px 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    min-width: 300px;
+    transition: transform 0.3s;
+}
+
+.gen2-family-block:hover {
+    transform: translateY(-4px);
+}
+
+/* ================= GERAÇÃO 3 ================= */
+
+.gen3-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6px;
+    width: 100%;
+}
+
+.gen3-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.78rem;
+    color: #9b6644;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+    opacity: 0.8;
+}
+
+@media (max-width: 900px) {
+    .gen2-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gen2-family-block {
+        width: 100%;
+        max-width: 420px;
+    }
+}
+
+/* ================= MINI CASAL (Gen3 com cônjuge) ================= */
+
+.mini-couple {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+}
+
+.mini-connector {
+    width: 30px;
+    height: 3px;
+    background: #7b2d2d;
+    border-radius: 999px;
+    flex-shrink: 0;
+    margin: 0 4px;
+    margin-bottom: 28px; /* alinha com centro das fotos */
+}
+
+.no-children-label {
+    font-size: 0.72rem;
+    color: #aaa;
+    font-style: italic;
+    text-align: center;
+    margin-top: 6px;
+    letter-spacing: 0.03em;
+}
